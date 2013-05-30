@@ -82,7 +82,58 @@ todo:
 
 todo:
 
-## 2.2 The "Collection" Data Type
+
+## 2.2 The "Field" Data Type
+
+todo:
+
+### identifier
+
+The identifier for the `Field` data type is:
+
+`http://gedcomx.org/v1/Field`
+
+### properties
+
+name  | description | data type | constraints
+------|-------------|-----------|------------
+todo: | | |
+
+### 2.2.1 The "Field" XML Element
+
+todo:
+
+### 2.2.1 The "Field" JSON Element
+
+todo:
+
+
+## 2.3 The "FieldValue" Data Type
+
+todo:
+
+### identifier
+
+The identifier for the `FieldValue` data type is:
+
+`http://gedcomx.org/v1/FieldValue`
+
+### properties
+
+name  | description | data type | constraints
+------|-------------|-----------|------------
+todo: | | |
+
+### 2.3.1 The "FieldValue" XML Element
+
+todo:
+
+### 2.3.1 The "FieldValue" JSON Element
+
+todo:
+
+
+## 2.4 The "Collection" Data Type
 
 todo:
 
@@ -98,40 +149,91 @@ name  | description | data type | constraints
 ------|-------------|-----------|------------
 todo: | | | 
 
-### 2.2.1 The "Collection" XML Element
+### 2.4.1 The "Collection" XML Element
 
 todo:
 
-### 2.2.1 The "Collection" JSON Element
+### 2.4.1 The "Collection" JSON Element
 
 todo:
 
-## 2.3 The "Field" Data Type
+
+## 2.4 The "CollectionCoverage" Data Type
 
 todo:
 
 ### identifier
 
-The identifier for the `Field` data type is:
+The identifier for the `CollectionCoverage` data type is:
 
-`http://gedcomx.org/v1/Field`
+`http://gedcomx.org/v1/CollectionCoverage`
 
 ### properties
 
 name  | description | data type | constraints
 ------|-------------|-----------|------------
-todo: | | | 
+todo: | | |
 
-### 2.2.1 The "Field" XML Element
-
-todo:
-
-### 2.2.1 The "Field" JSON Element
+### 2.4.1 The "CollectionCoverage" XML Element
 
 todo:
 
+### 2.4.1 The "CollectionCoverage" JSON Element
 
-## 2.4 The "RecordDescriptor" Data Type
+todo:
+
+
+## 2.5 The "Facet" Data Type
+
+todo:
+
+### identifier
+
+The identifier for the `Facet` data type is:
+
+`http://gedcomx.org/v1/Facet`
+
+### properties
+
+name  | description | data type | constraints
+------|-------------|-----------|------------
+todo: | | |
+
+### 2.5.1 The "CollectionCoverage" XML Element
+
+todo:
+
+### 2.5.1 The "CollectionCoverage" JSON Element
+
+todo:
+
+
+## 2.6 The "FacetValue" Data Type
+
+todo:
+
+### identifier
+
+The identifier for the `Facet` data type is:
+
+`http://gedcomx.org/v1/Facet`
+
+### properties
+
+name  | description | data type | constraints
+------|-------------|-----------|------------
+todo: | | |
+
+### 2.6.1 The "FacetValue" XML Element
+
+todo:
+
+### 2.6.1 The "FacetValue" JSON Element
+
+todo:
+
+
+## 2.7 The "RecordDescriptor" Data Type
 
 todo:
 
@@ -147,16 +249,16 @@ name  | description | data type | constraints
 ------|-------------|-----------|------------
 todo: | | | 
 
-### 2.2.1 The "RecordDescriptor" XML Element
+### 2.7.1 The "RecordDescriptor" XML Element
 
 todo:
 
-### 2.2.1 The "RecordDescriptor" JSON Element
+### 2.7.1 The "RecordDescriptor" JSON Element
 
 todo:
 
 
-## 2.4 The "FieldDescriptor" Data Type
+## 2.8 The "FieldDescriptor" Data Type
 
 todo:
 
@@ -172,11 +274,11 @@ name  | description | data type | constraints
 ------|-------------|-----------|------------
 todo: | | | 
 
-### 2.2.1 The "FieldDescriptor" XML Element
+### 2.8.1 The "FieldDescriptor" XML Element
 
 todo:
 
-### 2.2.1 The "FieldDescriptor" JSON Element
+### 2.8.1 The "FieldDescriptor" JSON Element
 
 todo:
 
