@@ -1,4 +1,5 @@
 Welcome
 -------
 
-The GEDCOMX-Record project is an extension to [GEDCOM X](http://www.gedcomx.org) to define support for field-based record data.
+The GEDCOMX-Record project is an extension to [GEDCOM X](http://www.gedcomx.org) to define support for
+exchanging the results of large-scale, field-based extraction of record data from digital images.
