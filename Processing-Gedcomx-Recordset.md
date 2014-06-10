@@ -170,11 +170,11 @@ A GEDCOM X record set comes in a file that.....
             <ul>
               <li>The principal person is the person where the <code>principal</code> value is set to <code>"true"</code>. </li>
             </ul></li>
-            <li>Find the Residence <code>fact</code>.
+            <li>Find the Residence <code>fact</code> of the principal person.
             <ul>
             <li>The Residence <code>fact</code> is the fact of type "http://gedcomx.org/Residence".</li>
             </ul></li>
-            <li>Find the <code>place</code> property of that fact.</li>
+            <li>Find the <code>place</code> property of the Residence fact.</li>
             <li>Look at the <code>original</code> property.</li>
             </ol>
           <h4>Example</h4>
