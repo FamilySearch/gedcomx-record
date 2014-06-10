@@ -194,16 +194,16 @@ A GEDCOM X record set comes in a file that.....
       <td>Birth Date of the Principal Person</td>
         <td>
           <ol>
-            <li>Find the principal person.</li>
+            <li>Find the principal person.
             <ul>
               <li>The principal person is the person where the <code>principal</code> value is set to <code>"true"</code>. </li>
-            </ul>
-            <li>Find the Birth <code>fact</code>.</li>
+            </ul></li>
+            <li>Find the Birth <code>fact</code> of the principal person.
             <ul>
             <li>The Birth <code>fact</code> is the fact of type "http://gedcomx.org/Birth".</li>
-            </ul>
-            <li>Find the <code>date</code> property of that fact.</li>
-            <li>Look at the <code>original</code> property.</li>
+            </ul></li>
+            <li>Find the <code>date</code> property of the Birth fact.</li>
+            <li>Look at the <code>original</code> property to find the birth date of the principal person.</li>
             </ol>
           <h4>Example</h4>
           <pre>
