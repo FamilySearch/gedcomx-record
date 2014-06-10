@@ -277,7 +277,7 @@ A GEDCOM X record set comes in a file that.....
       </tbody>
       </table>
       
-      <h4 id="chunk">Process the metadata file</h4>
+## Process the metadata file
 
       <table class="table table-striped">
 
