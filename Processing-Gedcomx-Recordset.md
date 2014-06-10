@@ -42,10 +42,10 @@ A GEDCOM X record set comes in a file that.....
         <td>Collection Title</td>
         <td>
          <ol>
-            <li>Find the description of the record.</li>
+            <li>Find the description of the record.
             <ul>
               <li>The record's <code<description</code> property will contain a reference. Resolve this reference to the <code>sourceDescription id</code>.</li>
-            </ul>
+            </ul></li>
             <li>The source's <code>componentOf</code> property will contain a <code>description</code> reference to the description of a collection. Resolve this reference to the <code>sourceDescription</code>.</li>
             <li>Look at the <code>title</code> property of the <code>sourceDescription</code>.</li>
           </ol>
