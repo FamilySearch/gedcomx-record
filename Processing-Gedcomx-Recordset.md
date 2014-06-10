@@ -293,10 +293,10 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
         <td>Time Span of Collection</td>
         <td>
           <ol>
-            <li>Find the description of the metadata.</li>
+            <li>Find the description of the metadata.
             <ul>
               <li>The metadata's <code>description</code> property will contain a reference. Resolve this reference to the <code>sourceDescription id</code>.</li>
-            </ul>
+            </ul></li>
             <li>Find the <code>coverage</code> property.</li>
             <li>Look at the <code>original</code> or <code>formal</code> value(s) of the <code>temporal</code> property.</li>
           </ol>
