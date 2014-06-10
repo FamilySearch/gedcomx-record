@@ -175,7 +175,7 @@ A GEDCOM X record set comes in a file that.....
             <li>The Residence <code>fact</code> is the fact of type "http://gedcomx.org/Residence".</li>
             </ul></li>
             <li>Find the <code>place</code> property of the Residence fact.</li>
-            <li>Look at the <code>original</code> property.</li>
+            <li>Look at the <code>original</code> property to find the residence of the principal person.</li>
             </ol>
           <h4>Example</h4>
           <pre>
@@ -222,10 +222,10 @@ A GEDCOM X record set comes in a file that.....
       <td>Surname of the Principal Person</td>
         <td>
           <ol>
-            <li>Find the principal person.</li>
+            <li>Find the principal person.
             <ul>
               <li>The principal person is the person where the <code>principal</code> value is set to <code>"true"</code>. </li>
-            </ul>
+            </ul></li>
             <li>Find the <code>name</code> property of the principal person.</li>
             <li>Find the <code>part</code> property with a <code>field</code> value of "http://gedcomx.org/Surname".</li>
             <li>Find the <code>value</code> property of type "http://gedcomx.org/Original".</li>
