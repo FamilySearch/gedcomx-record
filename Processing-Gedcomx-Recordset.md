@@ -279,7 +279,7 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
       
 ## Process the metadata file
 
-      <table class="table table-striped">
+<table class="table table-striped">
 
       <thead>
       <tr>
