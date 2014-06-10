@@ -321,10 +321,10 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
         <td>Geographic Location of Collection</td>
         <td>
           <ol>
-            <li>Find the description of the metadata.</li>
+            <li>Find the description of the metadata.
             <ul>
               <li>The metadata's <code>description</code> property will contain a reference. Resolve this reference to the <code>sourceDescription id</code>.</li>
-            </ul>
+            </ul></li>
             <li>Find the <code>coverage</code> property.</li>
             <li>Find the <code>spatial description</code> property.</li>
             <ul>
