@@ -251,7 +251,7 @@ A GEDCOM X record set comes in a file that.....
           <ol>
             <li>Find the <code>relationship</code> type that has a value of "http://gedcomx.org/Couple".</li>
             <ul>
-              <li>The relationship type's <code>resource</code> property will contain two references. Resolve each reference to the <code>person id</code>.
+              <li>The relationship type's <code>resource</code> property will contain two references. Resolve each reference to the <code>person id</code>.</li>
             </ul></li>
             <li>Find the Marriage <code>fact</code>.
             <ul>
