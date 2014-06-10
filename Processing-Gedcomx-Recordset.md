@@ -70,10 +70,10 @@ A GEDCOM X record set comes in a file that.....
       <td>Gender of the Principal Person</td>
         <td>
           <ol>
-            <li>Find the principal person.</li>
+            <li>Find the principal person.
             <ul>
               <li>The principal person is the person where the <code>principal</code> value is set to <code>"true"</code>. </li>
-            </ul>
+            </ul></li>
             <li>Look at the <code>gender</code> property of the principal person.</li>
           </ol>
           <h4>Example</h4>
