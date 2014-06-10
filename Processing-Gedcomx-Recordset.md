@@ -229,7 +229,7 @@ A GEDCOM X record set comes in a file that.....
             <li>Find the <code>name</code> property of the principal person.</li>
             <li>Find the <code>part</code> property with a <code>field</code> value of "http://gedcomx.org/Surname".</li>
             <li>Find the <code>value</code> property of type "http://gedcomx.org/Original".</li>
-            <li>Look at the <code>text</code> property of that <code>value</code> property.</li>
+            <li>Look at the <code>text</code> property of that <code>value</code> property to find the surname of the principal person.</li>
           </ol>
           <h4>Example</h4>
           <pre>
@@ -251,8 +251,8 @@ A GEDCOM X record set comes in a file that.....
           <ol>
             <li>Find the <code>relationship</code> type that has a value of "http://gedcomx.org/Couple".</li>
             <ul>
-              <li>The relationship type's <code>resource</code> property will contain two references. Resolve each reference to the <code>person id</code>.</li>
-            </ul>
+              <li>The relationship type's <code>resource</code> property will contain two references. Resolve each reference to the <code>person id</code>.
+            </ul></li>
             <li>Find the Marriage <code>fact</code>.</li>
             <ul>
             <li>The Marriage <code>fact</code> is the fact of type "http://gedcomx.org/Marriage".</li>
