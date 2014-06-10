@@ -118,10 +118,10 @@ A GEDCOM X record set comes in a file that.....
       <td>Interpreted text of the Gender of the Principal Person as stated on the record</td>
         <td>
           <ol>
-            <li>Find the principal person.</li>
+            <li>Find the principal person.
             <ul>
               <li>The principal person is the person where the <code>principal</code> value is set to <code>"true"</code>. </li>
-            </ul>
+            </ul></li>
             <li>Find the <code>gender</code> property.
             <li>Find the <code>field</code> property of type "http://gedcomx.org/Gender".
             <li>Find the <code>value</code> property of type "http://gedcomx.org/Interpreted".</li>
