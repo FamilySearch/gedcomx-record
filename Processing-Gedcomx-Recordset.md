@@ -246,7 +246,7 @@ A GEDCOM X record set comes in a file that.....
           </pre>
         </td>
       </tr>
-        <td>Marriage Place of Bride and Groom</td>
+        <td>Marriage Place of a Couple</td>
         <td>
           <ol>
             <li>Find the <code>relationship</code> type that has a value of "http://gedcomx.org/Couple".
@@ -257,8 +257,8 @@ A GEDCOM X record set comes in a file that.....
             <ul>
             <li>The Marriage <code>fact</code> is the fact of type "http://gedcomx.org/Marriage".</li>
             </ul></li>
-            <li>Find the <code>place</code> property of that fact.</li>
-            <li>Look at the <code>original</code> property.</li>
+            <li>Find the <code>place</code> property of the Marriage fact.</li>
+            <li>Look at the <code>original</code> property to find the marriage place of a couple.</li>
           </ol>
           <h4>Example</h4>
           <pre>
