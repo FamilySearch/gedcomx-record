@@ -253,10 +253,10 @@ A GEDCOM X record set comes in a file that.....
             <ul>
               <li>The relationship type's <code>resource</code> property will contain two references. Resolve each reference to the <code>person id</code>.
             </ul></li>
-            <li>Find the Marriage <code>fact</code>.</li>
+            <li>Find the Marriage <code>fact</code>.
             <ul>
             <li>The Marriage <code>fact</code> is the fact of type "http://gedcomx.org/Marriage".</li>
-            </ul>
+            </ul></li>
             <li>Find the <code>place</code> property of that fact.</li>
             <li>Look at the <code>original</code> property.</li>
           </ol>
