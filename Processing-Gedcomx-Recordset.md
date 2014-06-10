@@ -18,10 +18,12 @@ A GEDCOM X record set comes in a file that.....
         <td>Record Title</td>
         <td>
           <ol>
-            <li>Find the description of the record.
-            <ul>
-              <li>The record's <code>description</code> property will contain a reference. Resolve this reference to the <code>id</code> of the <code>sourceDescription</code>.</li>
-            </ul></li>
+            <li>
+              Find the description of the record.
+              <ul>
+                <li>The record's <code>description</code> property will contain a reference. Resolve this reference to the <code>id</code> of the <code>sourceDescription</code>.</li>
+              </ul>
+            </li>
             <li>Look at the <code>title</code> property of the <code>sourceDescription</code>.</li>
           </ol>
           <h4>Example</h4>
