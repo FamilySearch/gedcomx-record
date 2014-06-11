@@ -797,3 +797,43 @@ name | JSON member | JSON object type
 recordType | recordType | [`URI`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/json-format-specification.md#uri)
 
 
+# 4. The GEDCOM X XML Record Set
+
+As a convenience for exchanging sets of records in a single bundle, this specification defines an additional media type:
+
+`application/x-gedcomx-records-v1+xml`
+
+## 4.1 GEDCOM X XML Record Set Element QName
+
+The QName of a GEDCOM X XML Record Set element is defined by a `LocalPart` of the value `records` and the `NamespaceURI`
+of the value `http://gedcomx.org/v1/`.
+
+## 4.2 GEDCOM X Record Set Element Data Type
+
+The data type of the GEDCOM X Record Set element is defined as follows:
+
+### properties
+
+name | description | XML property | XML type
+-----|-------------|--------------|---------
+id | The identifier for the XML element. The id attribute MUST conform to the constraints defined in [GEDCOM X XML, Section 7, "Fragment Identifiers"](https://github.com/FamilySearch/gedcomx/blob/master/specifications/xml-format-specification.md#fragment-ids). | id (attribute) | xsd:string
+lang | The locale identifier for the record set. | [IETF BCP 47](http://tools.ietf.org/html/bcp47) locale tag | OPTIONAL. If not provided, the locale is determined per [Internationalization Considerations](https://github.com/FamilySearch/gedcomx/blob/master/specifications/conceptual-model-specification.md#i18n).
+metadata | A container for metadata common to all records in the record set. Examples include collection hierarchy and record descriptors. | gx:metadata | [`gx:Gedcomx`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/xml-format-specification.md#gedcomx-type)
+records | The records in the data set. | gx:record | [`gx:Gedcomx`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/xml-format-specification.md#gedcomx-type)
+
+## Example
+
+The following is an example of the structure of a GEDCOM X XML Element:
+
+```xml
+<records xmlns="http://gedcomx.org/v1/">
+  <metadata>...</metadata>
+  <record>...</record>
+  <record>...</record>
+  <record>...</record>
+  <record>...</record>
+  ...
+
+  <!-- possibility of extension elements -->
+</gedcomx>
+```
