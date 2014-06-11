@@ -715,13 +715,13 @@ primary | An indication of whether a given fact on a person or relationship is c
 ### 3.1.1 "Fact" XML Type Extensions
 
 name | XML property | XML type
------|-------------|--------------|---------
+-----|-------------|----------
 primary | primary (attribute) | xsd:boolean
 
 ### 3.1.2 "Fact" JSON Type Extensions
 
 name | JSON member | JSON object type
------|-------------|-------------|-----------------
+-----|-------------|-------------
 primary | primary | boolean
 
 
@@ -737,13 +737,13 @@ principal | An indication of whether a person considered the "principal" person 
 ### 3.2.1 "Person" XML Type Extensions
 
 name | XML property | XML type
------|-------------|--------------|---------
+-----|-------------|--------------
 principal | principal (attribute) | xsd:boolean
 
 ### 3.2.2 "Person" JSON Type Extensions
 
 name | JSON member | JSON object type
------|-------------|-------------|-----------------
+-----|-------------|-------------
 principal | principal | boolean
 
 
@@ -761,7 +761,7 @@ descriptorRef | A reference to the descriptor for the record being described. | 
 ### 3.3.1 "SourceDescription" XML Type Extensions
 
 name | XML property | XML type
------|-------------|--------------|---------
+-----|-------------|--------------
 titleLabel | gx:titleLabel | xsd:string
 sortKey | gx:sortKey | xsd:string
 descriptorRef | gx:descriptor | [`gx:ResourceReference`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/xml-format-specification.md#resource-reference)
@@ -769,7 +769,7 @@ descriptorRef | gx:descriptor | [`gx:ResourceReference`](https://github.com/Fami
 ### 3.3.2 "SourceDescription" JSON Type Extensions
 
 name | JSON member | JSON object type
------|-------------|-------------|-----------------
+-----|-------------|-------------
 titleLabel | titleLabel | string
 sortKey | sortKey | string
 descriptorRef | descriptor | [`ResourceReference`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/json-format-specification.md#resource-reference)
@@ -787,13 +787,13 @@ recordType | URI identifying the type of record being covered. | [Enumerated Val
 ### 3.4.1 "Coverage" XML Type Extensions
 
 name | XML property | XML type
------|-------------|--------------|---------
+-----|-------------|--------------
 recordType | gx:recordType | [`URI`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/xml-format-specification.md#uri)
 
 ### 3.4.2 "Coverage" JSON Type Extensions
 
 name | JSON member | JSON object type
------|-------------|-------------|-----------------
+-----|-------------|-------------
 recordType | recordType | [`URI`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/json-format-specification.md#uri)
 
 <a name="recordset"/>
