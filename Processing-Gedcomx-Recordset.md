@@ -1,6 +1,6 @@
 # Processing a GEDCOM X Record Set
 
-A GEDCOM X record set file represents an indexed historical record. It will include a source description, a person (for each persona in the record), and relationships.  The following table outlines some elements you may need to find as you consume the data. The formal Gedcom X specification is [here] (https://github.com/FamilySearch/gedcomx-record/blob/master/specifications/record-specification.md).
+A GEDCOM X record set file represents an indexed historical record. It will include a source description, a person (for each persona in the record), and relationships.  The following table outlines some elements you may need to find as you consume the data. The formal GEDCOM X specification is [here] (https://github.com/FamilySearch/gedcomx-record/blob/master/specifications/record-specification.md).
 
 ### Example Heading
 
