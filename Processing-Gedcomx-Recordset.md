@@ -298,7 +298,7 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
               <li>The metadata's <code>description</code> property will contain a reference. Resolve this reference to the <code>sourceDescription id</code>.</li>
             </ul></li>
             <li>Find the <code>coverage</code> property.</li>
-            <li>Look at the <code>original</code> or <code>formal</code> value(s) of the <code>temporal</code> property.</li>
+            <li>Look at the <code>original</code> or <code>formal</code> value(s) of the <code>temporal</code> property. (For more information on date formats, see the Gedcom X date format [spec](https://github.com/FamilySearch/gedcomx/blob/master/specifications/date-format-specification.md).)</li>
           </ol>
           <h4>Example</h4>
           <pre>
@@ -330,7 +330,7 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
             <ul>
               <li>The metadata's <code>spatial description</code> property will contain a reference. Resolve this reference to the <code>place id</code>.</li>
             </ul></li>
-            <li>Look at the <code>name</code> value of that property  to find the geographic location of the collection.</li>
+            <li>Look at the <code>name</code> value of that property to find the geographic location of the collection.</li>
           </ol>
           <h4>Example</h4>
           <pre>
