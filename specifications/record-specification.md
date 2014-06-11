@@ -796,6 +796,7 @@ name | JSON member | JSON object type
 -----|-------------|-------------|-----------------
 recordType | recordType | [`URI`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/json-format-specification.md#uri)
 
+<a name="recordset"/>
 
 # 4. The GEDCOM X XML Record Set
 
