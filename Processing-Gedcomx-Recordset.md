@@ -279,7 +279,7 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
         <td>
           <ol>
             <li>
-              Find the description of a record.
+              Find the description of the record.
               <ul>
                 <li>The record's <code>description</code> property will contain a <code>sourceDescription</code>. Resolve this reference to the <code>id</code> of the <code>sourceDescription</code>.</li>
               </ul>
