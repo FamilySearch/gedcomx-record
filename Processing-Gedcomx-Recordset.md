@@ -288,13 +288,13 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
           </ol>
           <h4>Example</h4>
           <pre>
-&lt;record description="#7">
+&lt;source description="#src_s1"/>
   ...
-  &lt;sourceDescription ... id="7"&gt
-    &lt;title>Record 7&lt;/title>
+  &lt;sourceDescription about="https://familysearch.org/ark:/61903/3:1:S3HY-DH44-3CM?cc=1747615" ... id="src_s1"&gt
+  ...
   &lt;/sourceDescription>
   ...
-&lt;/record>
+&lt;/sourceDescription>
           </pre>
         </td>
       </tr>
