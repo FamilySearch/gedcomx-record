@@ -30,7 +30,7 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
           <pre>
 &lt;record description="#7">
   ...
-  &lt;sourceDescription ... id="7"&gt
+  &lt;sourceDescription ... id="7">
     &lt;title>Record 7&lt;/title>
   &lt;/sourceDescription>
   ...
@@ -53,12 +53,12 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
           <pre>
 &lt;record description="#7">
   ...
-  &lt;sourceDescription ... id="7"&gt
-    &lt;componentOf description="6"/&gt
+  &lt;sourceDescription ... id="7">
+    &lt;componentOf description="6"/>
   ...
   &lt;/sourceDescription>
   ...
-  &lt;sourceDescription ... id="6"&gt  
+  &lt;sourceDescription ... id="6">  
     &lt;title>Collection 1&lt;/title>
   &lt;/sourceDescription>
   ...
