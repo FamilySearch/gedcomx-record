@@ -275,7 +275,7 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
         </td>
       </tr>
       <tr>
-        <td>Image</td>
+        <td>Image URL</td>
         <td>
           <ol>
             <li>
@@ -284,7 +284,7 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
                 <li>The record's <code>description</code> property will contain a <code>sourceDescription</code>. Resolve this reference to the <code>id</code> of the <code>sourceDescription</code>.</li>
               </ul>
             </li>
-            <li>Look at the <code>about</code> property of the <code>sourceDescription</code> to find the image.</li>
+            <li>Look at the <code>about</code> property of the <code>sourceDescription</code> to find the image URL.</li>
           </ol>
           <h4>Example</h4>
           <pre>
