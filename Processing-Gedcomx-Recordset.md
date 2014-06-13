@@ -281,7 +281,7 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
             <li>
               Find the source description of the record.
               <ul>
-                <li>The record's <code>sourceDescription</code> property will contain a reference. Resolve this reference to the <code>id</code> of the <code>sourceDescription</code>.</li>
+                <li>The record's <code>sourceDescription</code> property will contain a reference. Resolve this reference to the <code>id</code> of the <code>sourceDescription</code> with <code>resourceType</code> "http://gedcomx.org/DigitalArtifact".</li>
               </ul>
             </li>
             <li>Look at the <code>about</code> property of the <code>sourceDescription</code> to find the image URL.</li>
