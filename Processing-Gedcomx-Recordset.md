@@ -44,7 +44,7 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
          <ol>
             <li>Find the description of the record.
             <ul>
-              <li>The record's <code<description</code> property will contain a reference. Resolve this reference to the <code>sourceDescription id</code>.</li>
+              <li>The record's <code>description</code> property will contain a reference. Resolve this reference to the <code>sourceDescription id</code>.</li>
             </ul></li>
             <li>The source's <code>componentOf</code> property will contain a <code>description</code> reference to the description of a collection. Resolve this reference to the <code>sourceDescription</code>.</li>
             <li>Look at the <code>title</code> property of the <code>sourceDescription</code>.</li>
@@ -54,7 +54,7 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
 &lt;record description="#7">
   ...
   &lt;sourceDescription ... id="7">
-    &lt;componentOf description="6"/>
+    &lt;componentOf description="#6"/>
   ...
   &lt;/sourceDescription>
   ...
@@ -279,22 +279,28 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
         <td>
           <ol>
             <li>
-              Find the source description of the record.
+              Find the description of the record.
               <ul>
-                <li>The record's <code>sourceDescription</code> property will contain a reference. Resolve this reference to the <code>id</code> of the <code>sourceDescription</code> with <code>resourceType</code> "http://gedcomx.org/DigitalArtifact".</li>
+                <li>The record's <code>sourceDescription</code> property will contain a reference. Resolve this reference to the <code>sourceDescription</code> with <code>resourceType</code> "http://gedcomx.org/DigitalArtifact".</li>
               </ul>
             </li>
+            <li>The source's <code>source</code> property will contain a <code>description</code> reference to the image. Resolve this reference to the <code>sourceDescription</code>.</li>
             <li>Look at the <code>about</code> property of the <code>sourceDescription</code> to find the image URL.</li>
           </ol>
           <h4>Example</h4>
           <pre>
-&lt;source description="#src_s1"/>
+&lt;record description="#7">
   ...
-  &lt;sourceDescription about="https://familysearch.org/ark:/61903/3:1:S3HY-DH44-3CM?cc=1747615" ... id="src_s1">
+  &lt;sourceDescription ... id="7">
+    &lt;sourcedescription="#6"/>
   ...
   &lt;/sourceDescription>
   ...
-&lt;/sourceDescription>
+  &lt;sourceDescription ... id="6">  
+    &lt;sourceDescription about>Collection 1&lt;/sourceDescrioption about>
+  &lt;/sourceDescription>
+  ...
+&lt;/record>
           </pre>
         </td>
       </tr>
@@ -329,7 +335,7 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
           <pre>
 &lt;metadata description="#src_1">
   ...
-  &lt;sourceDescription ... id="src_1"&gt
+  &lt;sourceDescription ... id="src_1">
     &lt;coverage>
      &lt;temporal>
       &lt;original>1538/1910&lt;/original>
