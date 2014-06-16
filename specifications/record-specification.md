@@ -763,7 +763,7 @@ descriptorRef | A reference to the descriptor for the record being described. | 
 name | XML property | XML type
 -----|-------------|--------------
 titleLabel | gx:titleLabel | xsd:string
-sortKey | gx:sortKey | xsd:string
+sortKey | sortKey (attribute) | xsd:string
 descriptorRef | gx:descriptor | [`gx:ResourceReference`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/xml-format-specification.md#resource-reference)
 
 ### 3.3.2 "SourceDescription" JSON Type Extensions
