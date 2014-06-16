@@ -184,7 +184,7 @@ A GEDCOM X record set file represents a set of indexed historical record. Each r
   ...   
    &lt;fact type="http://gedcomx.org/Residence" ... 
     &lt;place>
-     &lt;original>Blandford-Forum, Blandford,Forum, Dorset, England>
+     &lt;original>Blandford-Forum, Blandford,Forum, Dorset, England&lt;/original>
   ...
 &lt;/record>
           </pre>
@@ -212,7 +212,7 @@ A GEDCOM X record set file represents a set of indexed historical record. Each r
   ...   
    &lt;fact type="http://gedcomx.org/Birth" ... >
     &lt;date>
-     &lt;original>1763>
+     &lt;original>1763&lt;/original>
   ...
 &lt;/record>
           </pre>
@@ -268,7 +268,7 @@ A GEDCOM X record set file represents a set of indexed historical record. Each r
    &lt;person2 resource="#p_62"/>  
    &lt;fact type="http://gedcomx.org/Marriage" ... >
     &lt;place>
-     &lt;original>Bridport, Bridport, Dorset, England>
+     &lt;original>Bridport, Bridport, Dorset, England&lt;/original>
   ...
 &lt;/record>
           </pre>
@@ -296,9 +296,8 @@ A GEDCOM X record set file represents a set of indexed historical record. Each r
   ...
   &lt;/sourceDescription>
   ...
-  &lt;sourceDescription ... id="src_1">  
-    &lt;sourceDescription about="https://familysearch.org/ark:/61903/3:1:S3HY-DH44-3CM?cc=1747615" ... >
-  &lt;/sourceDescription>
+  &lt;sourceDescription about="https://familysearch.org/ark:/61903/3:1:S3HY-DH44-3CM?cc=1747615" ... id="src_s1">  
+    &lt;/sourceDescription>
   ...
 &lt;/record>
           </pre>
@@ -329,7 +328,7 @@ A GEDCOM X record set file represents a set of indexed historical record. Each r
               <li>The metadata's <code>description</code> property will contain a reference. Resolve this reference to the <code>sourceDescription id</code>.</li>
             </ul></li>
             <li>Find the <code>coverage</code> property.</li>
-            <li>Look at the <code>original</code> or <code>formal</code> value(s) of the <code>temporal</code> property to find the time span of the collection. (For more information on date formats, see the Gedcom X date format <a href="https://github.com/FamilySearch/gedcomx/blob/master/specifications/date-format-specification.md">spec</a>.)</li>
+            <li>Look at the <code>original</code> or <code>formal</code> value(s) of the <code>temporal</code> property to find the time span of the collection. (For more information on date formats, see the GEDCOM X date format <a href="https://github.com/FamilySearch/gedcomx/blob/master/specifications/date-format-specification.md">spec</a>.)</li>
           </ol>
           <h4>Example</h4>
           <pre>
@@ -369,7 +368,7 @@ A GEDCOM X record set file represents a set of indexed historical record. Each r
   ...
   &lt;sourceDescription ... id="src_1"&gt
     &lt;coverage>
-     &lt;spatial description = #place_1986340-1927925>
+     &lt;spatial description = "#place_1986340-1927925">
   ...
     &lt;/spatial>
     &lt;/coverage>
@@ -394,7 +393,7 @@ A GEDCOM X record set file represents a set of indexed historical record. Each r
           <h4>Example</h4>
           <pre>
 &lt;recordDescriptor id="rd_1910806">
-  &lt;field&gt
+  &lt;field>
     &lt;value type="http://gedcomx.org/Interpreted" ... >
      &lt;label xml:lang="ja">名前&lt;/label>
   ...
@@ -404,14 +403,3 @@ A GEDCOM X record set file represents a set of indexed historical record. Each r
       </tr>
       </tbody>
       </table>
-
-<h3>Another Heading</h3>
-
-header|header2|header3
-------|-------|-------
-item1|some text|another text
-item1|some text|another text
-item1|some text|another text
-item1|some text|another text
-item1|some text|another text
-item1|some text|another text
