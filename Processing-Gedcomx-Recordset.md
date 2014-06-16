@@ -1,6 +1,6 @@
 # Processing a GEDCOM X Record Set
 
-A GEDCOM X record set file represents an indexed historical record. It will include a source description, a person (for each persona in the record), relationships and image URLs.  The following table outlines some examples of elements you may need to find as you consume the data. The formal GEDCOM X XML Record Set specification is [here] (https://github.com/FamilySearch/gedcomx-record/blob/master/specifications/record-specification.md#recordset).
+A GEDCOM X record set file represents a set of indexed historical record. Each record in the record set will include a source description, a person (for each persona in the record), relationships and image URLs.  The following table outlines some examples of elements you may need to find as you consume the data. The formal GEDCOM X XML Record Set specification is [here] (https://github.com/FamilySearch/gedcomx-record/blob/master/specifications/record-specification.md#recordset).
 
 ### Process the record file
 
@@ -156,7 +156,7 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
 &lt;record description="#s1">
   &lt;person id="p_1" ... principal="true">
   ...   
-   &lt;identifier type=" ... /Persistent">https://familysearch.org/ ... >
+   &lt;identifier type=" ... /Persistent">https://familysearch.org/ ... &lt;/identifier>
   ...
 &lt;/record>
           </pre>
@@ -182,7 +182,7 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
 &lt;record description="#s1">
   &lt;person id="p_1" ... principal="true">
   ...   
-   &lt;fact type="http://gedcomx.org/Residence" ... >
+   &lt;fact type="http://gedcomx.org/Residence" ... 
     &lt;place>
      &lt;original>Blandford-Forum, Blandford,Forum, Dorset, England>
   ...
@@ -292,7 +292,7 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
 &lt;record description="#7">
   ...
   &lt;sourceDescription ... id="7">
-    &lt;sourceDescription="#src_s1"/>
+    &lt;source description="#src_s1"/>
   ...
   &lt;/sourceDescription>
   ...
