@@ -297,7 +297,7 @@ A GEDCOM X record set file represents an indexed historical record. It will incl
   &lt;/sourceDescription>
   ...
   &lt;sourceDescription ... id="6">  
-    &lt;sourceDescription about>Collection 1&lt;/sourceDescrioption about>
+    &lt;sourceDescription about>"https://familysearch.org/ark:/61903/3:1:S3HY-DH44-3CM?cc=1747615"&lt;/sourceDescription about>
   &lt;/sourceDescription>
   ...
 &lt;/record>
