@@ -1,6 +1,45 @@
-# Processing a GEDCOM X Record Set
+# Processing a GEDCOM X Record
 
-A GEDCOM X record set file represents a set of indexed historical record. Each record in the record set will include a source description, a person (for each persona in the record), relationships and image URLs.  The following table outlines some examples of elements you may need to find as you consume the data. The formal GEDCOM X XML Record Set specification is [here] (https://github.com/FamilySearch/gedcomx-record/blob/master/specifications/record-specification.md#recordset).
+This document explains how to process a GEDCOM X record. A single GEDCOM X record can be represented as a GEDCOM X document or you can find multiple records in a GEDCOM X record set. For more information, see [Section 4] (https://github.com/FamilySearch/gedcomx-record/blob/master/specifications/record-specification.md#recordset) of the GEDCOM X record specification. The examples below show a record as if they would appear in a record set file. Single records represented as a GEDCOM X document would have "gedcomx" instead of "record", as shown below. 
+
+<table class="table table-striped">
+
+      <thead>
+      <tr>
+        <th>To find:</th>
+        <th>Do this:</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr>
+        <td>Record Title</td>
+        <td>
+          <ol>
+            <li>
+              Find the description of the record.
+              <ul>
+                <li>The record's <code>description</code> property will contain a reference. Resolve this reference to the <code>id</code> of the <code>sourceDescription</code>.</li>
+              </ul>
+            </li>
+            <li>Look at the <code>title</code> property of the <code>sourceDescription</code>.</li>
+          </ol>
+          <h4>Example</h4>
+          <pre>
+&lt;gedcomx description="#7">
+  ...
+  &lt;sourceDescription ... id="7">
+    &lt;title>Record 7&lt;/title>
+  &lt;/sourceDescription>
+  ...
+&lt;/gedcomx>
+          </pre>
+        </td>
+      </tr>
+      </tbody>
+      </table>
+
+Each record in the record set will include a source description, a person (for each persona in the record), relationships and image URLs.  The following table outlines some examples of elements you may need to find as you consume the data. 
 
 ### Process the record file
 
