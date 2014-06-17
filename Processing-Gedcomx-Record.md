@@ -1,6 +1,6 @@
 # Processing a GEDCOM X Record
 
-This document explains how to process a GEDCOM X record. A single GEDCOM X record can be represented as a GEDCOM X document or you can find multiple records in a GEDCOM X record set. For more information, see [Section 4] (https://github.com/FamilySearch/gedcomx-record/blob/master/specifications/record-specification.md#recordset) of the GEDCOM X record specification. The examples below show a record as if they would appear in a record set file. Single records represented as a GEDCOM X document would have "gedcomx" instead of "record", as shown below. 
+This document explains how to process a GEDCOM X record. A single GEDCOM X record can be represented as a GEDCOM X document or you can find multiple records in a GEDCOM X record set. For more information, see [Section 4] (https://github.com/FamilySearch/gedcomx-record/blob/master/specifications/record-specification.md#recordset) of the GEDCOM X record specification. The following example shows how to find the title of a record in a single record  represented as a GEDCOM X document. 
 
 <table class="table table-striped">
 
@@ -39,7 +39,7 @@ This document explains how to process a GEDCOM X record. A single GEDCOM X recor
       </tbody>
       </table>
 
-Each record in the record set will include a source description, a person (for each persona in the record), relationships and image URLs.  The following table outlines some examples of elements you may need to find as you consume the data. 
+The examples below show records as they would appear in a record set file. Each record in the record set will include a source description, a person (for each persona in the record), relationships and image URLs.  The following table outlines some examples of elements you may need to find as you consume the data. 
 
 ### Process the record file
 
