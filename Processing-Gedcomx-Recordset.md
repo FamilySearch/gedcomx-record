@@ -281,7 +281,7 @@ A GEDCOM X record set file represents a set of indexed historical record. Each r
             <li>
               Find the description of the record.
               <ul>
-                <li>The record's <code>sourceDescription</code> property will contain a reference. Resolve this reference to the <code>sourceDescription id</code>.</li>
+                <li>The record's <code>description</code> property will contain a reference. Resolve this reference to the <code>sourceDescription id</code>.</li>
               </ul>
             </li>
             <li>The source description's <code>source</code> property will contain a <code>description</code> reference to the image. Resolve this reference to the <code>sourceDescription</code>.</li>
