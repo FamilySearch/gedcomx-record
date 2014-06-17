@@ -28,7 +28,7 @@ The following example shows how to find the title of a record in a single record
           </ol>
           <h4>Example</h4>
           <pre>
-&lt;gedcomx xmlms= "http://gedcomx.org/v1/" description="#7">
+&lt;gedcomx xmlns= "http://gedcomx.org/v1/" description="#7">
   ...
   &lt;sourceDescription ... id="7">
     &lt;title>Record 7&lt;/title>
