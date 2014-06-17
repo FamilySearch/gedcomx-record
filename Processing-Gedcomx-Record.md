@@ -1,6 +1,8 @@
 # Processing a GEDCOM X Record
 
-This document explains how to process a GEDCOM X record. A single GEDCOM X record can be represented as a GEDCOM X document or you can find multiple records in a GEDCOM X record set. For more information, see [Section 4] (https://github.com/FamilySearch/gedcomx-record/blob/master/specifications/record-specification.md#recordset) of the GEDCOM X record specification. The following example shows how to find the title of a record in a single record  represented as a GEDCOM X document. 
+This document explains how to process a GEDCOM X record. A single GEDCOM X record can be represented as a GEDCOM X document or you can find multiple records in a GEDCOM X record set. For more information record sets, see [Section 4] (https://github.com/FamilySearch/gedcomx-record/blob/master/specifications/record-specification.md#recordset) of the GEDCOM X record specification. 
+
+The following example shows how to find the title of a record in a single record represented as a GEDCOM X document. 
 
 <table class="table table-striped">
 
