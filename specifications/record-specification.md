@@ -57,7 +57,7 @@ to exchange data specific to genealogical records, including field-based record 
   * [2.6 The "FieldDescriptor" Data Type](#field-descriptor)
     * [2.6.1 The "FieldDescriptor" XML Type](#field-descriptor-xml-type)
     * [2.6.2 The "FieldDescriptor" JSON Type](#field-descriptor-json-type)
-  * [2.7 The "FieldDescriptor" Data Type](#field-value-descriptor)
+  * [2.7 The "FieldValueDescriptor" Data Type](#field-value-descriptor)
     * [2.7.1 The "FieldValueDescriptor" XML Type](#field-value-descriptor-type)
     * [2.7.2 The "FieldValueDescriptor" JSON Type](#field-value-descriptor-type)
 * [3. Property Extensions](#property-extensions)
