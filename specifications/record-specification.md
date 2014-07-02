@@ -539,7 +539,7 @@ The identifier for the `RecordDescriptor` data type is:
 name  | description | data type | constraints
 ------|-------------|-----------|------------
 id | A local identifier for the record descriptor. | string | OPTIONAL.  The id is to be used as a "fragment identifier" as defined by [RFC 3986, Section 3.5](http://tools.ietf.org/html/rfc3986#section-3.5). As such, the constraints of the id are provided in the definition of the media type (e.g. XML, JSON) of the data structure.
-lang | The locale identifier for the record descriptor. | [IETF BCP 47](http://tools.ietf.org/html/bcp47) locale tag | OPTIONAL. If not provided, the locale is determined per [Internationalization Considerations](https://github.com/FamilySearch/gedcomx/blob/master/specifications/conceptual-model-specification.md#i18n).
+lang | The locale identifier for the record descriptor. | [IETF BCP 47](http://tools.ietf.org/html/bcp47) locale tag | OPTIONAL. If not provided, the locale is determined per [Internationalization Considerations](https://github.com/FamilySearch/gedcomx/blob/master/specifications/conceptual-model-specification.md#il8n).
 fields | The descriptors for the fields of a record. | List of [`http://gedcomx.org/v1/FieldDescriptor`](#field-descriptor). Order is preserved. | OPTIONAL.
 
 <a name="record-descriptor-xml-type-element"/>
