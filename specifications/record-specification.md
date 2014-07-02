@@ -926,7 +926,7 @@ The data type of the GEDCOM X Record Set element is defined as follows:
 name | description | XML property | XML type
 -----|-------------|--------------|---------
 id | The identifier for the XML element. The id attribute MUST conform to the constraints defined in [GEDCOM X XML, Section 7, "Fragment Identifiers"](https://github.com/FamilySearch/gedcomx/blob/master/specifications/xml-format-specification.md#fragment-ids). | id (attribute) | xsd:string
-lang | The locale identifier for the record set. | [IETF BCP 47](http://tools.ietf.org/html/bcp47) locale tag | OPTIONAL. If not provided, the locale is determined per [Internationalization Considerations](https://github.com/FamilySearch/gedcomx/blob/master/specifications/conceptual-model-specification.md#i18n).
+lang | The locale identifier for the record set. | [IETF BCP 47](http://tools.ietf.org/html/bcp47) locale tag | OPTIONAL. If not provided, the locale is determined per [Internationalization Considerations](https://github.com/FamilySearch/gedcomx/blob/master/specifications/conceptual-model-specification.md#il8n).
 metadata | A container for metadata common to all records in the record set. Examples include collection hierarchy and record descriptors. | gx:metadata | [`gx:Gedcomx`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/xml-format-specification.md#gedcomx-type)
 records | The records in the data set. | gx:record | [`gx:Gedcomx`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/xml-format-specification.md#gedcomx-type)
 
