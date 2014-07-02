@@ -71,7 +71,7 @@ to exchange data specific to genealogical records, including field-based record 
     * [3.3.1 "SourceDescription" XML Type Extensions](#source-xml-type-extensions)
     * [3.3.2 "SourceDescription" JSON Type Extensions](#source-json-type-extensions)
   * [3.4 Extensions to the "Coverage" Data Type](#extensions-coverage-data-type)
-    * [3.4.1 "Coverage" XML Type Extensions](#coverage-xml-extensions)
+    * [3.4.1 "Coverage" XML Type Extensions](#coverage-xml-type-extensions)
     * [3.4.2 "Coverage" JSON Type Extensions](#coverage-json-type-extensions)
 * [4. The GEDCOM X XML Record Set](#recordset)
   * [4.1 GEDCOM X XML Record Set Element QName](#gedcomx-xml-element-qname)
