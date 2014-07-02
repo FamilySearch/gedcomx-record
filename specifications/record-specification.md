@@ -33,6 +33,49 @@ to exchange data specific to genealogical records, including field-based record 
 * [1. Introduction](#intro)
   * [1.1 Identifier, Version and Dependencies](#id-and-version)
   * [1.2 Notational Conventions](#notational-conventions)
+    * [1.2.1 Keywords](#keywords)
+    * [1.2.2 Compliance](#compliance)
+    * [1.2.3 Namespace Prefixes](#namespace-prefixes)
+* [2. Data Type Extensions](#data-type-extensions) 
+  * [2.1 The "Collection" Data Type](#collection)
+    * [2.1.1 The "Collection" XML Type and Element](#collection-type-element)
+    * [2.1.2 The "Collection" JSON Type and Member](#collection-type-member)
+  * [2.2 The "CollectionContent" Data Type](#collection-content)
+    * [2.2.1 The "CollectionContent" XML Type](#collection-content-type)
+    * [2.2.2 The "CollectionContent" JSON Type](#collection-content-json-type)
+  * [2.3 The "Field" Data Type](#field)
+    * [2.3.1 The "Field" XML Type and Element](#field-xml-type-element)
+    * [2.3.2 The "Field" JSON Type and Element](#field-json-type-element)
+  * [2.4 The "FieldValue" Data Type](#field-value-data-type)
+    * [2.4.1 Known Field Value Types](#known-field-value-types)
+    * [2.4.2 Known Field Value Data Types](#known-field-value-data-types)
+    * [2.4.3 The "FieldValue" XML Type](#field-value-xml-type)
+    * [2.4.4 The "FieldValue" JSON Type](#field-value-json-type)
+  * [2.5 The "RecordDescriptor" Data Type](#record-descriptor)
+    * [2.5.1 The "RecordDescriptor" XML Type and Element](#record-descriptor-xml-type-element)
+    * [2.5.2 The "RecordDescriptor" JSON Type and Member](#record-descriptor-json-type)
+  * [2.6 The "FieldDescriptor" Data Type](#field-descriptor)
+    * [2.6.1 The "FieldDescriptor" XML Type](#field-descriptor-xml-type)
+    * [2.6.2 The "FieldDescriptor" JSON Type](#field-descriptor-json-type)
+  * [2.7 The "FieldDescriptor" Data Type](#field-value-descriptor)
+    * [2.7.1 The "FieldValueDescriptor" XML Type](#field-value-descriptor-type)
+    * [2.7.2 The "FieldValueDescriptor" JSON Type](#field-value-descriptor-type)
+* [3. Property Extensions](#property-extensions)
+  * [3.1 Extensions to the "Fact" Data Type](#extensions-fact-data-type)
+    * [3.1.1 "Fact" XML Type Extensions](#fact-xml-type-extensions)
+    * [3.1.2 "Fact" JSON Type Extensions](#fact-json-type-extensions)
+  * [3.2 Extensions to the "Person" Data Type](#extensions-person-data-type)
+    * [3.2.1 "Person" XML Type Extensions](#person-xml-type-extensions)
+    * [3.2.2 "Person" JSON Type Extensions](#person-json-type-extensions)
+  * [3.3 Extensions to the "SourceDescription" Data Type](#extensions-source-data-type)
+    * [3.3.1 "SourceDescription" XML Type Extensions](#source-xml-type-extensions)
+    * [3.3.2 "SourceDescription" JSON Type Extensions](#source-json-type-extensions)
+  * [3.4 Extensions to the "Coverage" Data Type](#extensions-coverage-data-type)
+    * [3.4.1 "Coverage" XML Type Extensions](#coverage-xml-extensions)
+    * [3.4.2 "Coverage" JSON Type Extensions](#coverage-json-type-extensions)
+* [4. The GEDCOM X XML Record Set](#recordset)
+  * [4.1 GEDCOM X XML Record Set Element QName](#gedcomx-xml-element-qname)
+  * [4.2 GEDCOM X Record Set Element Data Type](#gedcomx-element-data-type)
 
 <a name="id-and-version"/>
 
@@ -585,7 +628,7 @@ values | The descriptors for the field values of the field. | List of [`http://g
 
 <a name="field-descriptor-xml-type"/>
 
-### 2.5.1 The "FieldDescriptor" XML Type
+### 2.6.1 The "FieldDescriptor" XML Type
 
 The `gx:FieldDescriptor` XML type is used to (de)serialize the `http://gedcomx.org/v1/FieldDescriptor`
 data type.
@@ -620,7 +663,7 @@ values | The descriptors for the field values of the field. | gx:value | [`gx:Fi
 
 <a name="field-descriptor-json-type"/>
 
-### 2.5.2 The "FieldDescriptor" JSON Type
+### 2.6.2 The "FieldDescriptor" JSON Type
 
 The `FieldDescriptor` JSON type is used to (de)serialize the `http://gedcomx.org/v1/FieldDescriptor`
 data type.
@@ -650,7 +693,7 @@ values | The descriptors for the field values of the field. | values | [`FieldVa
 
 <a name="field-value-descriptor"/>
 
-## 2.6 The "FieldValueDescriptor" Data Type
+## 2.7 The "FieldValueDescriptor" Data Type
 
 The `FieldValueDescriptor` data type provides metadata about the structure and layout of a field, as
 well as the expected data to be extracted from a field.
@@ -673,7 +716,7 @@ displayLabels | The human-readable labels for the field values. | List of [`http
 
 <a name="field-value-descriptor-type"/>
 
-### 2.6.1 The "FieldValueDescriptor" XML Type
+### 2.7.1 The "FieldValueDescriptor" XML Type
 
 The `gx:FieldValueDescriptor` XML type is used to (de)serialize the `http://gedcomx.org/v1/FieldValueDescriptor`
 data type.
@@ -704,7 +747,7 @@ displayLabels | The human-readable labels for the field values. | gx:displayLabe
 
 <a name="field-value-descriptor-json-type"/>
 
-### 2.6.2 The "FieldValueDescriptor" JSON Type
+### 2.7.2 The "FieldValueDescriptor" JSON Type
 
 The `FieldDescriptor` JSON type is used to (de)serialize the `http://gedcomx.org/v1/FieldDescriptor`
 data type.
