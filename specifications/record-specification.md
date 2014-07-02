@@ -20,11 +20,21 @@ For details, see:
 
 http://creativecommons.org/licenses/by-sa/3.0/
 
+<a name="intro"/>
+
 # 1. Introduction
 
 GEDCOM X Record Extensions is a specification that defines extensions to the
 [core GEDCOM X specification set](https://github.com/FamilySearch/gedcomx/blob/master/specifications/)
 to exchange data specific to genealogical records, including field-based record extraction.
+
+## Table Of Contents
+
+* [1. Introduction](#intro)
+  * [1.1 Identifier, Version and Dependencies](#id-and-version)
+  * [1.2 Notational Conventions](#notational-conventions)
+
+<a name="id-and-version"/>
 
 ## 1.1 Identifier, Version, and Dependencies
 
@@ -48,7 +58,11 @@ This specification refers to the GEDCOM X Field Types specification identified
 by [`http://gedcomx.org/field-types/v1`](https://github.com/FamilySearch/gedcomx-record/blob/master/specifications/field-types-specification.md)
 to recommend field types to be used.
 
+<a name="notational-conventions"/>
+
 ## 1.2 Notational Conventions
+
+<a name="keywords"/>
 
 ### 1.2.1 Keywords
 
@@ -58,6 +72,8 @@ document are to be interpreted as described in BCP 14,
 [RFC2119](http://tools.ietf.org/html/rfc2119), as scoped to those conformance
 targets.
 
+<a name="compliance"/>
+
 ## 1.2.2 Compliance
 
 An implementation of the GEDCOM X Record Extensions is "non-compliant" if it fails to satisfy
@@ -66,12 +82,15 @@ the  MUST or REQUIRED and all of the SHOULD level requirements is said to be "un
 compliant"; and implementation that satisfies all of the MUST level requirements but not all of the
 SHOULD level requirements is said to be "conditionally compliant".
 
+<a name="namespace-prefixes"/>
+
 ### 1.2.3 Namespace Prefixes
 
 This specification uses the same namespace prefix conventions that are used by the
 [GEDCOM X XML](https://github.com/FamilySearch/gedcomx/blob/master/specifications/xml-format-specification.md)
 specification.
 
+<a name="data-type-extensions"/>
 
 # 2. Data Type Extensions
 
@@ -102,6 +121,8 @@ content | Information about the content of the collection. | List of [`http://ge
 title | A title for the collection. | string | OPTIONAL.
 size | An indication of the size of the collection. The units of size are left unspecified. | integer | OPTIONAL.
 attribution | The attribution of this collection. | [`http://gedcomx.org/Attribution`](#attribution) | OPTIONAL. If not provided, the attribution of the containing data set (e.g. file) of the source description is assumed.
+
+<a name="collection-type-element"/>
 
 ### 2.1.1 The "Collection" XML Type and Element
 
@@ -142,6 +163,7 @@ attribution | The attribution of this data set. | gx:attribution | [`gx:Attribut
 </gx:collection>
 ```
 
+<a name="collection-type-member"/>
 
 ### 2.1.2 The "Collection" JSON Type and Member
 
@@ -198,6 +220,8 @@ resourceType | Enumerated value identifying the type of resource in the collecti
 count | The count of resources of the specified `resourceType` in the collection. | integer | OPTIONAL.
 completeness | An indication of how "complete" is the collection of resources of the specified `resourceType`. A value of "1.0" implies that all resources of the specified `resourceType` are accounted for by the collection.  | double | OPTIONAL. If provided, MUST be a number between 0 and 1.
 
+<a name="collection-content-type"/>
+
 ### 2.2.1 The "CollectionContent" XML Type
 
 The `gx:CollectionContent` XML type is used to (de)serialize the `http://gedcomx.org/v1/CollectionContent`
@@ -224,6 +248,7 @@ completeness | An indication of how "complete" is the collection of resources of
 </...>
 ```
 
+<a name="collection-content-json-type"/>
 
 ### 2.2.2 The "CollectionContent" JSON Type
 
@@ -280,6 +305,8 @@ id | A local identifier for the field. | string | OPTIONAL.  The id is to be use
 type | Enumerated value identifying the type of the field. | [Enumerated Value](https://github.com/FamilySearch/gedcomx/blob/master/specifications/conceptual-model-specification.md#enumerated-value) | OPTIONAL. If provided, MUST identify a field type, and use of a [known field type](https://github.com/FamilySearch/gedcomx-record/blob/master/specifications/field-types-specification.md) is RECOMMENDED.
 values | The values of the data extracted from the field. | List of [`http://gedcomx.org/v1/FieldValue`](#field-value) | OPTIONAL
 
+<a name="field-xml-type-element"/>
+
 ### 2.3.1 The "Field" XML Type and Element
 
 The `gx:Field` XML type is used to (de)serialize the `http://gedcomx.org/v1/Field` data type.
@@ -307,6 +334,7 @@ values | The values of the data extracted from the field. | gx:value | [`gx:Fiel
 </gx:field>
 ```
 
+<a name="field-json-type-element"/>
 
 ### 2.3.2 The "Field" JSON Type and Element
 
@@ -334,6 +362,7 @@ values | The values of the data extracted from the field. | values | array of [`
 ]
 ```
 
+<a name="field-value-data-type"/>
 
 ## 2.4 The "FieldValue" Data Type
 
@@ -372,7 +401,6 @@ URI | description
 `http://gedcomx.org/Original`| The field value carries the original value of the field; the verbatim text as stated on the record.
 `http://gedcomx.org/Interpreted`| The field value carries an interpretation of the value of the field.
 
-
 <a name="known-field-value-data-types"/>
 
 ### 2.4.2 Known Field Value Data Types
@@ -385,6 +413,7 @@ URI | description
 `http://www.w3.org/2001/XMLSchema#int`| The text of the field value is to be interpreted as an integer.
 `http://www.w3.org/2001/XMLSchema#dateTime`| The text of the field value is to be interpreted as a date.
 
+<a name="field-value-xml-type"/>
 
 ### 2.4.3 The "FieldValue" XML Type
 
@@ -415,6 +444,7 @@ resource | Reference to the resource that is the value. | resource (attribute) |
 </...>
 ```
 
+<a name="field-value-json-type"/>
 
 ### 2.4.4 The "FieldValue" JSON Type
 
@@ -469,6 +499,8 @@ id | A local identifier for the record descriptor. | string | OPTIONAL.  The id 
 lang | The locale identifier for the record descriptor. | [IETF BCP 47](http://tools.ietf.org/html/bcp47) locale tag | OPTIONAL. If not provided, the locale is determined per [Internationalization Considerations](https://github.com/FamilySearch/gedcomx/blob/master/specifications/conceptual-model-specification.md#i18n).
 fields | The descriptors for the fields of a record. | List of [`http://gedcomx.org/v1/FieldDescriptor`](#field-descriptor). Order is preserved. | OPTIONAL.
 
+<a name="record-descriptor-xml-type-element"/>
+
 ### 2.5.1 The "RecordDescriptor" XML Type and Element
 
 The `gx:RecordDescriptor` XML type is used to (de)serialize the `http://gedcomx.org/v1/RecordDescriptor`
@@ -498,6 +530,7 @@ fields | The descriptors for the fields of a record. | gx:field | [`gx:FieldDesc
 </gx:recordDescriptor>
 ```
 
+<a name="record-descriptor-json-type"/>
 
 ### 2.5.2 The "RecordDescriptor" JSON Type and Member
 
@@ -550,6 +583,8 @@ originalLabel | The text of the label for the field as originally stated on the 
 descriptions | The human-readable descriptions for the fields. | List of [`http://gedcomx.org/TextValue`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/conceptual-model-specification.md#text-value). Order is preserved. | OPTIONAL. If more than one description is provided, descriptions are assumed to be given in order of preference, with the most preferred description in the first position in the list.
 values | The descriptors for the field values of the field. | List of [`http://gedcomx.org/v1/FieldValueDescriptor`](#field-value-descriptor). Order is preserved. | OPTIONAL.
 
+<a name="field-descriptor-xml-type"/>
+
 ### 2.5.1 The "FieldDescriptor" XML Type
 
 The `gx:FieldDescriptor` XML type is used to (de)serialize the `http://gedcomx.org/v1/FieldDescriptor`
@@ -583,6 +618,7 @@ values | The descriptors for the field values of the field. | gx:value | [`gx:Fi
 </...>
 ```
 
+<a name="field-descriptor-json-type"/>
 
 ### 2.5.2 The "FieldDescriptor" JSON Type
 
@@ -635,6 +671,8 @@ labelId | The id for the label of this field value. Field values can be associat
 optional | Whether the field value was considered optional on the record. Used as a hint to whether the field value should be displayed even if the value is empty. | boolean | OPTIONAL
 displayLabels | The human-readable labels for the field values. | List of [`http://gedcomx.org/TextValue`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/conceptual-model-specification.md#text-value). Order is preserved. | OPTIONAL. If more than one display label is provided, display labels are assumed to be given in order of preference, with the most preferred display label in the first position in the list.
 
+<a name="field-value-descriptor-type"/>
+
 ### 2.6.1 The "FieldValueDescriptor" XML Type
 
 The `gx:FieldValueDescriptor` XML type is used to (de)serialize the `http://gedcomx.org/v1/FieldValueDescriptor`
@@ -664,6 +702,7 @@ displayLabels | The human-readable labels for the field values. | gx:displayLabe
 </...>
 ```
 
+<a name="field-value-descriptor-json-type"/>
 
 ### 2.6.2 The "FieldValueDescriptor" JSON Type
 
@@ -694,6 +733,7 @@ displayLabels | The human-readable labels for the field values. | displayLabels 
 
 }
 ```
+<a name="property-extensions"/>
 
 # 3. Property Extensions
 
@@ -702,6 +742,8 @@ This section defines a set of extensions to data types already defined by the
 and and describes how the properties are included as extensions to
 [GEDCOM X JSON](https://github.com/FamilySearch/gedcomx/blob/master/specifications/json-format-specification.md) and
 [GEDCOM X XML](https://github.com/FamilySearch/gedcomx/blob/master/specifications/xml-format-specification.md).
+
+<a name="extensions-fact-data-type"/>
 
 ## 3.1 Extensions to the "Fact" Data Type
 
@@ -712,11 +754,15 @@ name  | description | data type | constraints
 ------|-------------|-----------|------------
 primary | An indication of whether a given fact on a person or relationship is considered the "primary" fact in the context of a record. | boolean | OPTIONAL.
 
+<a name="fact-xml-type-extensions"/>
+
 ### 3.1.1 "Fact" XML Type Extensions
 
 name | XML property | XML type
 -----|-------------|----------
 primary | primary (attribute) | xsd:boolean
+
+<a name="fact-json-type-extensions"/>
 
 ### 3.1.2 "Fact" JSON Type Extensions
 
@@ -724,6 +770,7 @@ name | JSON member | JSON object type
 -----|-------------|-------------
 primary | primary | boolean
 
+<a name="extensions-person-data-type"/>
 
 ## 3.2 Extensions to the "Person" Data Type
 
@@ -734,11 +781,15 @@ name  | description | data type | constraints
 ------|-------------|-----------|------------
 principal | An indication of whether a person considered the "principal" person in the context of a record. | boolean | OPTIONAL.
 
+<a name="person-xml-type-extensions"/>
+
 ### 3.2.1 "Person" XML Type Extensions
 
 name | XML property | XML type
 -----|-------------|--------------
 principal | principal (attribute) | xsd:boolean
+
+<a name="person-json-type-extensions"/>
 
 ### 3.2.2 "Person" JSON Type Extensions
 
@@ -746,6 +797,7 @@ name | JSON member | JSON object type
 -----|-------------|-------------
 principal | principal | boolean
 
+<a name="extensions-source-data-type"/>
 
 ## 3.3 Extensions to the "SourceDescription" Data Type
 
@@ -758,6 +810,8 @@ titleLabel | A label for the title of the resource being described. | string | O
 sortKey | A key that can be alphanumerically compared to the sort keys of other resources that indicates the order of records in a collection. | string | OPTIONAL.
 descriptorRef | A reference to the descriptor for the record being described. | [URI](https://github.com/FamilySearch/gedcomx/blob/master/specifications/conceptual-model-specification.md#uri) | OPTIONAL. If provided, MUST resolve to an instance of [`http://gedcomx.org/v1/RecordDescriptor`](#record-descriptor).
 
+<a name="source-xml-type-extensions"/>
+
 ### 3.3.1 "SourceDescription" XML Type Extensions
 
 name | XML property | XML type
@@ -765,6 +819,8 @@ name | XML property | XML type
 titleLabel | gx:titleLabel | xsd:string
 sortKey | sortKey (attribute) | xsd:string
 descriptorRef | gx:descriptor | [`gx:ResourceReference`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/xml-format-specification.md#resource-reference)
+
+<a name="source-json-type-extensions"/>
 
 ### 3.3.2 "SourceDescription" JSON Type Extensions
 
@@ -774,6 +830,7 @@ titleLabel | titleLabel | string
 sortKey | sortKey | string
 descriptorRef | descriptor | [`ResourceReference`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/json-format-specification.md#resource-reference)
 
+<a name="extensions-coverage-data-type"/>
 
 ## 3.4 Extensions to the "Coverage" Data Type
 
@@ -784,11 +841,15 @@ name  | description | data type | constraints
 ------|-------------|-----------|------------
 recordType | URI identifying the type of record being covered. | [Enumerated Value](https://github.com/FamilySearch/gedcomx/blob/master/specifications/conceptual-model-specification.md#enumerated-value) | REQUIRED. MUST identify a resource type, and use of a [known resource type](https://github.com/FamilySearch/gedcomx/blob/master/specifications/conceptual-model-specification.md#known-resource-types) is RECOMMENDED.
 
+<a name="coverage-xml-type-extensions"/>
+
 ### 3.4.1 "Coverage" XML Type Extensions
 
 name | XML property | XML type
 -----|-------------|--------------
 recordType | gx:recordType | [`URI`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/xml-format-specification.md#uri)
+
+<a name="coverage-json-type-extensions"/>
 
 ### 3.4.2 "Coverage" JSON Type Extensions
 
@@ -804,10 +865,14 @@ As a convenience for exchanging sets of records in a single bundle, this specifi
 
 `application/x-gedcomx-records-v1+xml`
 
+<a name="gedcomx-xml-element-qname"/>
+
 ## 4.1 GEDCOM X XML Record Set Element QName
 
 The QName of a GEDCOM X XML Record Set element is defined by a `LocalPart` of the value `records` and the `NamespaceURI`
 of the value `http://gedcomx.org/v1/`.
+
+<a name="gedcomx-element-data-type"/>
 
 ## 4.2 GEDCOM X Record Set Element Data Type
 
