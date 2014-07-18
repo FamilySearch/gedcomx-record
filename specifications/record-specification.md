@@ -70,9 +70,12 @@ to exchange data specific to genealogical records, including field-based record 
   * [3.3 Extensions to the "SourceDescription" Data Type](#extensions-source-data-type)
     * [3.3.1 "SourceDescription" XML Type Extensions](#source-xml-type-extensions)
     * [3.3.2 "SourceDescription" JSON Type Extensions](#source-json-type-extensions)
-  * [3.4 Extensions to the "Coverage" Data Type](#extensions-coverage-data-type)
-    * [3.4.1 "Coverage" XML Type Extensions](#coverage-xml-type-extensions)
-    * [3.4.2 "Coverage" JSON Type Extensions](#coverage-json-type-extensions)
+  * [3.4 Extensions to the "SourceReference" Data Type](#extensions-source-reference-data-type)
+    * [3.4.1 "SourceReference" XML Type Extensions](#source-reference-xml-type-extensions)
+    * [3.4.2 "SourceReference" JSON Type Extensions](#source-reference-json-type-extensions)
+  * [3.5 Extensions to the "Coverage" Data Type](#extensions-coverage-data-type)
+    * [3.5.1 "Coverage" XML Type Extensions](#coverage-xml-type-extensions)
+    * [3.5.2 "Coverage" JSON Type Extensions](#coverage-json-type-extensions)
 * [4. The GEDCOM X XML Record Set](#recordset)
   * [4.1 GEDCOM X XML Record Set Element QName](#gedcomx-xml-element-qname)
   * [4.2 GEDCOM X Record Set Element Data Type](#gedcomx-element-data-type)
@@ -873,9 +876,49 @@ titleLabel | titleLabel | string
 sortKey | sortKey | string
 descriptorRef | descriptor | [`ResourceReference`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/json-format-specification.md#resource-reference)
 
+<a name="extensions-source-reference-data-type"/>
+
+## 3.4 Extensions to the "SourceReference" Data Type
+
+The following properties are defined as extensions to the
+[`SourceReference` Data Type](https://github.com/FamilySearch/gedcomx/blob/master/specifications/conceptual-model-specification.md#source-reference):
+
+name  | description | data type | constraints
+------|-------------|-----------|------------
+qualifiers | Qualifiers for the reference, used to identify specific fragments of the source that are being referenced. | List of [http://gedcomx.org/v1/Qualifier](https://github.com/FamilySearch/gedcomx/blob/master/specifications/conceptual-model-specification.md#qualifier) | OPTIONAL. If provided, use of a [known source reference qualifier](#known-source-reference-qualifiers) is RECOMMENDED.
+
+<a id="known-source-reference-qualifiers"/>
+
+#### Known Source Reference Qualifiers
+
+The following name part qualifiers are defined:
+
+name | value
+-----|-------
+`http://gedcomx.org/CharacterRegion`|A region of text in a digital document, in the form of `a,b` where `a` is the start character and `b` is the end character. The meaning of this qualifier is undefined if the source being referenced is not a digital document.
+`http://gedcomx.org/RectangleRegion`|A rectangular region of a digital image. The value of the qualifier is interpreted as a series of four comma-separated numbers. If all of the numbers is less than 1, the value is interpreted in the form of `x1,y1,x2,y2` where `x1,y1` is the relative percentage-based coordinates of the top-left corner of the rectangle and `x2,y2` is the relative percentage-based coordinates of the bottom-right corner of the rectangle. If any of the numbers is more than 1, the value is interpreted in the form of `x,y,w,h` where `x` is the point on the X axis of the image in pixels, `y` is the point on the Y axis in pixels, `w` is the width of the rectangle in pixels, and `h` in the height of the rectangle in pixels.  The meaning of this qualifier is undefined if the source being referenced is not a digital image.
+`http://gedcomx.org/TimeRegion`|A region of time of a digital audio or video recording, in the form of `a,b` where `a` is the starting point in milliseconds and `b` is the ending point in milliseconds. The meaning of this qualifier is undefined if the source being referenced is not a digital audio or video recording.
+
+<a name="source-reference-xml-type-extensions"/>
+
+### 3.4.1 "SourceReference" XML Type Extensions
+
+name | XML property | XML type
+-----|-------------|--------------
+qualifiers | gx:qualifier | [`gx:Qualifier`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/xml-format-specification.md#qualifier)
+
+<a name="source-reference-json-type-extensions"/>
+
+### 3.4.2 "SourceReference" JSON Type Extensions
+
+name | JSON member | JSON object type
+-----|-------------|-------------
+qualifiers | qualifiers | array of [`Qualifier`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/json-format-specification.md#qualifier)
+
+
 <a name="extensions-coverage-data-type"/>
 
-## 3.4 Extensions to the "Coverage" Data Type
+## 3.5 Extensions to the "Coverage" Data Type
 
 The following properties are defined as extensions to the
 [`Coverage` Data Type](https://github.com/FamilySearch/gedcomx/blob/master/specifications/conceptual-model-specification.md#coverage):
@@ -886,7 +929,7 @@ recordType | URI identifying the type of record being covered. | [Enumerated Val
 
 <a name="coverage-xml-type-extensions"/>
 
-### 3.4.1 "Coverage" XML Type Extensions
+### 3.5.1 "Coverage" XML Type Extensions
 
 name | XML property | XML type
 -----|-------------|--------------
@@ -894,7 +937,7 @@ recordType | gx:recordType | [`URI`](https://github.com/FamilySearch/gedcomx/blo
 
 <a name="coverage-json-type-extensions"/>
 
-### 3.4.2 "Coverage" JSON Type Extensions
+### 3.5.2 "Coverage" JSON Type Extensions
 
 name | JSON member | JSON object type
 -----|-------------|-------------
