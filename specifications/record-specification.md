@@ -36,7 +36,7 @@ to exchange data specific to genealogical records, including field-based record 
     * [1.2.1 Keywords](#keywords)
     * [1.2.2 Compliance](#compliance)
     * [1.2.3 Namespace Prefixes](#namespace-prefixes)
-* [2. Data Type Extensions](#data-type-extensions) 
+* [2. Data Type Extensions](#data-type-extensions)
   * [2.1 The "Collection" Data Type](#collection)
     * [2.1.1 The "Collection" XML Type and Element](#collection-type-element)
     * [2.1.2 The "Collection" JSON Type and Member](#collection-type-member)
@@ -342,6 +342,12 @@ of a person, the birth `Fact` of a person, the marriage `Fact` of a relationship
 The identifier for the `Field` data type is:
 
 `http://gedcomx.org/v1/Field`
+
+### extension
+
+This data type extends the following data type:
+
+`http://gedcomx.org/v1/Conclusion`
 
 ### properties
 
