@@ -721,7 +721,12 @@ id | A local identifier for the field value descriptor. | string | OPTIONAL.  Th
 type | Enumerated value identifying the type of the field value. | [Enumerated Value](https://github.com/FamilySearch/gedcomx/blob/master/specifications/conceptual-model-specification.md#enumerated-value) | OPTIONAL. If provided, MUST identify a field value type, and use of a [known field value type](#known-field-value-types) is RECOMMENDED.
 labelId | The id for the label of this field value. Field values can be associated with their descriptor by comparing the value of the `lableId`. | string | OPTIONAL.
 optional | Whether the field value was considered optional on the record. Used as a hint to whether the field value should be displayed even if the value is empty. | boolean | OPTIONAL
-displayLabels | The human-readable labels for the field values. | List of [`http://gedcomx.org/TextValue`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/conceptual-model-specification.md#text-value). Order is preserved. | OPTIONAL. If more than one display label is provided, display labels are assumed to be given in order of preference, with the most preferred display label in the first position in the list.
+labels | The human-readable labels for the field values. | List of [`http://gedcomx.org/TextValue`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/conceptual-model-specification.md#text-value). Order is preserved. | OPTIONAL. If more than one display label is provided, display labels are assumed to be given in order of preference, with the most preferred display label in the first position in the list.
+displaySortKey | A sort key for sorting this field value relative to other field values according to how they should be displayed for viewing. | string | OPTIONAL
+entrySortKey | A sort key for sorting this field value relative to other field values according to how they should be entered for editing. | string | OPTIONAL
+entryRequired | Whether some kind of entry is required when entering data for editing. | boolean | OPTIONAL
+editable | Whether the field value is editable. Some field values might be composed from other field values or otherwise calculated by the system. | boolean | OPTIONAL
+parentLabelId | The id of the label for the "parent" field value. For example, the parent field value of a "given name" field value might be the "name" field value. | string | OPTIONAL
 
 <a name="field-value-descriptor-type"/>
 
@@ -738,16 +743,22 @@ id | The identifier for the XML element. The id attribute MUST conform to the co
 type | Enumerated value identifying the type of the field value. | type (attribute) | [`URI`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/xml-format-specification.md#uri)
 labelId | The id for the label of this field value. | labelId (attribute) | xsd:string
 optional | Whether the field value was considered optional on the record. | optional (attribute) | xsd:boolean
-displayLabels | The human-readable labels for the field values. | gx:displayLabel | [`gx:TextValue`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/xml-format-specification.md#text-value)
+labels | The human-readable labels for the field values. | gx:label | [`gx:TextValue`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/xml-format-specification.md#text-value)
+displaySortKey | A sort key for sorting this field value relative to other field values according to how they should be displayed for viewing. | displaySortKey (attribute) | xsd:string
+entrySortKey | A sort key for sorting this field value relative to other field values according to how they should be entered for editing. | entrySortKey (attribute) | xsd:string
+entryRequired | Whether some kind of entry is required when entering data for editing. | entryRequired (attribute) | xsd:boolean 
+editable | Whether the field value is editable. Some field values might be composed from other field values or otherwise calculated by the system. | editable (attribute) | xsd:boolean
+parentLabelId | The id of the label for the "parent" field value. For example, the parent field value of a "given name" field value might be the "name" field value. | parentLabelId (attribute) | xsd:string
 
 ### examples
 
 ```xml
-<... id="..." type="..." labelId="..." optional="...">
-  <gx:displayLabel>
+<... id="..." type="..." labelId="..." optional="..." editable="..." displaySortKey="..." entrySortKey="..." entryRequired="..." parentLabelId="...">
+  <gx:label>
     ...
-  </gx:displayLabel>
+  </gx:label>
   ...
+
 
   <!-- possibility of extension elements -->
 
@@ -769,7 +780,12 @@ id | The identifier for the JSON element. The id attribute MUST conform to the c
 type | Enumerated value identifying the type of the field value. | type | [`URI`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/json-format-specification.md#uri)
 labelId | The id for the label of this field value. | labelId | string
 optional | Whether the field value was considered optional on the record. | optional | boolean
-displayLabels | The human-readable labels for the field values. | displayLabels | [`TextValue`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/json-format-specification.md#text-value)
+labels | The human-readable labels for the field values. | labels | [`TextValue`](https://github.com/FamilySearch/gedcomx/blob/master/specifications/json-format-specification.md#text-value)
+displaySortKey | A sort key for sorting this field value relative to other field values according to how they should be displayed for viewing. | displaySortKey | string
+entrySortKey | A sort key for sorting this field value relative to other field values according to how they should be entered for editing. | entrySortKey | string
+entryRequired | Whether some kind of entry is required when entering data for editing. | entryRequired | boolean 
+editable | Whether the field value is editable. Some field values might be composed from other field values or otherwise calculated by the system. | editable | boolean
+parentLabelId | The id of the label for the "parent" field value. For example, the parent field value of a "given name" field value might be the "name" field value. | parentLabelId | string
 
 ### examples
 
@@ -779,7 +795,12 @@ displayLabels | The human-readable labels for the field values. | displayLabels 
   "type" : "...",
   "labelId" : "...",
   "optional" : ...,
-  "displayLabels" : [ { ... } , { ... } ],
+  "labels" : [ { ... } , { ... } ],
+  "displaySortKey" : "...",
+  "entrySortKey" : "...",
+  "entryRequired" : ...,
+  "editable" : ...,
+  "parentLabelId" : "...",
 
   ...possibility of extension elements...
 
